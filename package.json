@@ -1,0 +1,29 @@
+{
+  "name": "webpack-chunk-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "rimraf": "^2.5.3",
+    "webpack": "^1.13.1"
+  },
+  "scripts": {
+    "prebuild:spa": "rimraf spa/dist",
+    "build:spa": "webpack --config spa/webpack.config.js",
+    "prebuild:multi": "rimraf multi/dist",
+    "build:multi": "webpack --config multi/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gingur/webpack-chunk-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gingur/webpack-chunk-examples/issues"
+  },
+  "homepage": "https://github.com/gingur/webpack-chunk-examples#readme"
+}
