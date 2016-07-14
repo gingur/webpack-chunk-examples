@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "bundle-loader": "^0.5.4",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "rimraf": "^2.5.3",
@@ -14,7 +15,12 @@
     "prebuild:spa": "rimraf spa/dist",
     "build:spa": "webpack --config spa/webpack.config.js",
     "prebuild:multi": "rimraf multi/dist",
-    "build:multi": "webpack --config multi/webpack.config.js"
+    "build:multi": "webpack --config multi/webpack.config.js",
+    "prebuild:chunk:spa": "rimraf chunk/spa/dist",
+    "build:chunk:spa": "webpack --config chunk/spa/webpack.config.js",
+    "prebuild:chunk:multi": "rimraf chunk/multi/dist",
+    "build:chunk:multi": "webpack --config chunk/multi/webpack.config.js",
+    "build": "npm run build:spa && npm run build:multi && npm run build:chunk:spa && npm run build:chunk:multi"
   },
   "repository": {
     "type": "git",
